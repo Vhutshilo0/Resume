@@ -22,10 +22,11 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin: 10px 5px;
 }
 
 nav ul li a {
@@ -54,7 +55,7 @@ main section {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 100%;
     max-width: 800px;
 }
 
@@ -67,8 +68,8 @@ main section {
 
 .profile-photo img {
     border-radius: 50%;
-    width: 225px;
-    height: 225px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border: 5px solid #0073e6;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -81,7 +82,7 @@ main section {
 
 .contact-info {
     text-align: center;
-    margin-top: -9px; /* Lift the contact info up */
+    margin-top: -10px; /* Lift the contact info up */
 }
 
 .contact-info p {
@@ -93,14 +94,14 @@ main section {
     margin-top: 10px;
 }
 
-.social-icon {
+.social-media a {
     margin: 0 10px;
     font-size: 1.5em;
     color: #0073e6;
     transition: color 0.3s;
 }
 
-social-icon:hover {
+.social-media a:hover {
     color: #005bb5;
 }
 
@@ -109,16 +110,15 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 0;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .card {
@@ -154,4 +154,58 @@ footer {
 
 .card button:hover {
     background-color: #005bb5;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main section {
+        padding: 15px;
+    }
+
+    .profile-photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+    }
+
+    .profile-photo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .contact-info p {
+        font-size: 1em;
+    }
 }
